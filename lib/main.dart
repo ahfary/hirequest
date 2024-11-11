@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hirequest/pages/auth/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -76,16 +77,6 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('HireQuest App'),
-      ),
-      body: Column(
-        children: [
-          Image.asset('assets/images/hirequest_logo.png'),
-          const Text('Selamat datang di aplikasi HireQuest'),
-        ]
-      ),
-    );
+    return const LoginPage();
   }
 }
