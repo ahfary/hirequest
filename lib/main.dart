@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:hirequest/pages/auth/forgot_password.dart';
 import 'package:hirequest/pages/auth/login_page.dart';
 
 void main() {
