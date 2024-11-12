@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hirequest/pages/profile/user_history.dart';
 // import 'package:hirequest/pages/auth/forgot_password.dart';
 // import 'package:hirequest/pages/auth/login_page.dart';
 // import 'package:hirequest/pages/auth/register_page.dart';
-import 'package:hirequest/pages/profile/user_profile.dart';
+// import 'package:hirequest/pages/profile/user_profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -80,6 +81,6 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return const ProfilePage();
+    return const JobHistoryPage();
   }
 }
