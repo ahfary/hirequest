@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hirequest/pages/profile/user_history.dart';
+import 'package:hirequest/pages/auth/login_page.dart';
+// import 'package:hirequest/pages/profile/user_history.dart';
+import 'package:hirequest/widgets/bottom_navigation.dart';
 // import 'package:hirequest/pages/auth/forgot_password.dart';
 // import 'package:hirequest/pages/auth/login_page.dart';
 // import 'package:hirequest/pages/auth/register_page.dart';
@@ -16,6 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -81,6 +84,6 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return const JobHistoryPage();
+    return SafeArea(child: const LoginPage());
   }
 }
