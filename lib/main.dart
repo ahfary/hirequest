@@ -1,14 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hirequest/pages/auth/forgot_password.dart';
-import 'package:hirequest/pages/auth/login_page.dart';
-import 'package:hirequest/pages/auth/ubah_password.dart';
-import 'package:hirequest/pages/profile/user_security.dart';
-// import 'package:hirequest/pages/profile/user_history.dart';
-import 'package:hirequest/widgets/bottom_navigation.dart';
-// import 'package:hirequest/pages/auth/forgot_password.dart';
-// import 'package:hirequest/pages/auth/login_page.dart';
 // import 'package:hirequest/pages/auth/register_page.dart';
-// import 'package:hirequest/pages/profile/user_profile.dart';
+import 'package:hirequest/pages/profile/user_security.dart';
 
 void main() {
   runApp(const MyApp());
