@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hirequest/widgets/bottom_navigation.dart';
+import 'package:hirequest/ui/widgets/bottom_navigation.dart';
 
 class JobHistoryPage extends StatelessWidget {
   const JobHistoryPage({super.key});
