@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hirequest/pages/profile/pin_page.dart';
+import 'package:hirequest/pages/profile/user_history.dart';
 // import 'package:hirequest/pages/auth/login_page.dart';
 import 'package:hirequest/ui/pages/auth/register_page.dart';
 // import 'package:hirequest/pages/auth/register_page.dart';
@@ -81,6 +83,6 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return const SafeArea(child: RegisterPage());
+    return const SafeArea(child: PinPage());
   }
 }
