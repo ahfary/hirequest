@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hirequest/ui/widgets/bottom_navigation.dart';
 
 class JobHistoryPage extends StatelessWidget {
   const JobHistoryPage({super.key});
@@ -54,12 +53,12 @@ class JobHistoryPage extends StatelessWidget {
           ),
           Expanded(
             child: ListView.builder(
-              padding: const EdgeInsets.symmetric(vertical: 8.0),
-              itemCount: 6, // Example count, change based on your data
+              padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+              itemCount: 12, // Example count, change based on your data
               itemBuilder: (context, index) {
                 return ListTile(
                   leading: Image.asset(
-                    'assets/icons/google_icon.png',
+                    'assets/icons/google.png',
                     width: 40,
                     height: 40,
                   ),
@@ -83,7 +82,6 @@ class JobHistoryPage extends StatelessWidget {
                     ],
                   ),
                   onTap: () {
-                    // TODO: Add job detail functionality
                   },
                 );
               },
@@ -92,7 +90,7 @@ class JobHistoryPage extends StatelessWidget {
         ],
       ),
 
-      bottomNavigationBar: const BottomNavigation(),
+      // bottomNavigationBar: const BottomNavigation(),
     );
   }
 }
