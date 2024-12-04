@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hirequest/ui/pages/auth/register_page.dart';
+import 'package:hirequest/ui/pages/home/beranda.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -95,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                         onPressed: () {
-                          // TODO: Add login functionality
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const BerandaPage()));
                         },
                         child: const Text(
                           'Masuk',
@@ -126,7 +128,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                         onPressed: () {
-                          // TODO: Add Google login functionality
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const BerandaPage()));
                         },
                         icon: Image.asset(
                           'assets/icons/google.png',
@@ -146,7 +148,7 @@ class _LoginPageState extends State<LoginPage> {
                         const Text('Tidak memiliki akun? '),
                         GestureDetector(
                           onTap: () {
-                            // TODO: Navigate to registration page
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const RegisterPage()));
                           },
                           child: const Text(
                             'Daftar',
