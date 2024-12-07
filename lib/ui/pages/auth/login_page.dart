@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hirequest/ui/pages/auth/register_page.dart';
 import 'package:hirequest/ui/pages/home/beranda.dart';
+import 'package:hirequest/ui/widgets/bottom_navigation.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -97,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const BerandaPage()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const BottomNavigation()));
                         },
                         child: const Text(
                           'Masuk',

@@ -1,10 +1,12 @@
 import "package:flutter/material.dart";
+import "package:google_fonts/google_fonts.dart";
 
 // Warna
 Color whiteColor = const Color(0xffffffff);
 Color blackColor = const Color(0xff000000);
 Color yellowColor = const Color(0xffF4C542);
 Color darkColor = const Color(0xff33363F);
+Color bgKategori = const Color(0xffCBC9D4);
 
 // BackgroundColor
 // Color darkBackgroundColor = const Color(0xff33363F);
@@ -20,6 +22,10 @@ Color darkColor = const Color(0xff33363F);
 // TextStyle darkTextStyle = GoogleFonts.poppins(
 //   color: darkColor,
 // );
+TextStyle kategoriTextStyle = GoogleFonts.dmSans(
+  fontSize: 10,
+  fontWeight: light
+);
 
 // FontWeight
 FontWeight light = FontWeight.w300;

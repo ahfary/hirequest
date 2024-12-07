@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hirequest/ui/pages/home/beranda.dart';
+import 'package:hirequest/ui/pages/home/search.dart';
+import 'package:hirequest/ui/pages/profile/pin_page.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({super.key});
@@ -9,6 +12,20 @@ class BottomNavigation extends StatefulWidget {
 
 class _BottomNavigationState extends State<BottomNavigation> {
   int _selectedIndex = 0;
+  final List<Widget>_Page = [
+    Center(
+      child: BerandaPage(),
+    ),
+    Center(
+      child: SearchPage(),
+    ),
+    Center(
+      child: HomePage(),
+    ),
+    Center(
+      child: HomePage(),
+    ),
+  ];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -19,9 +36,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('Page ${_selectedIndex + 1}'), // Placeholder for content
-      ),
+      body: _Page[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
