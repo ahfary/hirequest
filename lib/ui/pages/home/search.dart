@@ -74,7 +74,7 @@ class _SearchPageState extends State<SearchPage> {
               borderRadius: BorderRadius.circular(10)
             ),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           TextFormField(
               // onChanged: (value) => updateList(value),
               decoration: InputDecoration(
@@ -84,7 +84,7 @@ class _SearchPageState extends State<SearchPage> {
                     borderRadius: BorderRadius.circular(100),
                     borderSide: BorderSide.none,
                   ),
-                  prefixIcon: Icon(Icons.search),
+                  prefixIcon: const Icon(Icons.search),
                   hintText: 'Search ...'),
             ),
 
@@ -100,12 +100,12 @@ class _SearchPageState extends State<SearchPage> {
           child: Column(
             children: [
               Header(),
-              SizedBox(height: 40,),
-              ModelSearch(image: 'assets/icons/google.png', title: 'UI/UX Designer', description: 'Google inc . California, USA', price: 'd'),
-              SizedBox(height: 14,),
-              ModelSearch(image: 'assets/icons/google.png', title: 'UI/UX Designer', description: 'Google inc . California, USA', price: 'd'),
-              SizedBox(height: 14,),
-              ModelSearch(image: 'assets/icons/google.png', title: 'UI/UX Designer', description: 'Google inc . California, USA', price: 'd'),
+              const SizedBox(height: 40,),
+              const ModelSearch(image: 'assets/icons/google.png', title: 'UI/UX Designer', description: 'Google inc . California, USA', price: 'd'),
+              const SizedBox(height: 14,),
+              const ModelSearch(image: 'assets/icons/google.png', title: 'UI/UX Designer', description: 'Google inc . California, USA', price: 'd'),
+              const SizedBox(height: 14,),
+              const ModelSearch(image: 'assets/icons/google.png', title: 'UI/UX Designer', description: 'Google inc . California, USA', price: 'd'),
             ],
           ),
         ),

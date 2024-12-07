@@ -2,191 +2,187 @@ import 'package:flutter/material.dart';
 
 class BerandaPage extends StatelessWidget {
   const BerandaPage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade200,
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        title: const Text(
-          'Dream Jobs',
-          style: TextStyle(color: Colors.black),
-        ),
-        centerTitle: true,
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ListView(
           children: [
-            // Iklan di bagian atas
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Container(
-                width: double.infinity,
-                height: 150,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  image: const DecorationImage(
-                    image: NetworkImage(
-                        'https://your-image-url.com/google-ad.png'), // Ganti dengan URL gambar Anda
-                    fit: BoxFit.cover,
-                  ),
+            // Search Bar
+            TextField(
+              decoration: InputDecoration(
+                prefixIcon: const Icon(Icons.search),
+                hintText: 'Search',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(30),
+                  borderSide: BorderSide.none,
+                ),
+                filled: true,
+                fillColor: Colors.grey[200],
+              ),
+            ),
+            const SizedBox(height: 16),
+            // Banner
+            Container(
+              height: 150,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Image.asset(
+                      'assets/image/banner.png',
+                      width: double.infinity,
+                    ),
+                    const SizedBox(height: 24),
+                    const Text(
+                      'Dreaming of Google?\nHere is how you can land a job there!',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
-
+            const SizedBox(height: 64),
             // Recommended Jobs
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: Text(
-                'Recommended Jobs',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
+            const Text(
+              'Recommended Jobs',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Image.asset('assets/icons/google.png',
+                            height: 40), // Logo perusahaan
+                        const SizedBox(width: 8),
+                        const Text(
+                          'UI/UX Designer',
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    const Text('Google Inc - California, USA'),
+                    const SizedBox(height: 8),
+                    const Row(
+                      children: [
+                        Chip(label: Text('Design')),
+                        Chip(label: Text('Full-time')),
+                        Chip(label: Text('Senior designer')),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+                    const Text(
+                      'Rp. 225 Juta/Bulan',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        color: Colors.green,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Card(
-                elevation: 4,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: 50,
-                            height: 50,
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.pink,
-                            ),
-                            child: const Icon(Icons.star, color: Colors.white),
-                          ),
-                          const SizedBox(width: 16),
-                          const Column(
+            const SizedBox(height: 16),
+            // Recent Apply Job
+            const Text(
+              'Recent Apply Job',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // Logo Google
+                        Image.asset('assets/icons/google.png',
+                            height: 40), // Ganti dengan logo yang sesuai
+                        const SizedBox(width: 16),
+                        // Informasi utama
+                        const Expanded(
+                          child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Lead Designer',
+                                'Google',
                                 style: TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              Text('Dribbble Inc - California, USA'),
-                            ],
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 16),
-                      const Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Chip(label: Text('Senior Designer')),
-                          Chip(label: Text('Full Time')),
-                        ],
-                      ),
-                      const SizedBox(height: 16),
-                      const Text(
-                        'Rp.225 Juta/Bulan',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.green,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-
-            // Recent Apply Job
-            const Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 16.0),
-              child:  Text(
-                'Recent Apply Job',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 180, // Tinggi untuk daftar horizontal
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 2, // Ganti dengan jumlah data
-                padding: const EdgeInsets.all(16),
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.only(right: 16.0),
-                    child: Card(
-                      elevation: 4,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Container(
-                        width: 250,
-                        padding: const EdgeInsets.all(16),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.blue,
-                                  ),
-                                  child: const Icon(Icons.work, color: Colors.white),
-                                ),
-                                const SizedBox(width: 16),
-                                const Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Google',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    Text('Programmer'),
-                                  ],
-                                ),
-                              ],
-                            ),
-                            const Spacer(),
-                            const Text('50 menit yang lalu'),
-                            const SizedBox(height: 8),
-                            ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.amber,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8),
+                              Text(
+                                'Programmer',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.grey,
                                 ),
                               ),
-                              child: const Text('See CV/Interview'),
+                            ],
+                          ),
+                        ),
+                        // Lokasi dan waktu
+                        const Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Text(
+                              '50 Menit yang lalu',
+                              style:
+                                  TextStyle(fontSize: 12, color: Colors.grey),
+                            ),
+                            Text(
+                              'Jakarta, Senayan',
+                              style:
+                                  TextStyle(fontSize: 12, color: Colors.grey),
                             ),
                           ],
                         ),
-                      ),
+                      ],
                     ),
-                  );
-                },
+                    const SizedBox(height: 16),
+                    // Tombol "See CV/Interview"
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor:
+                            const Color(0xffF4C542), // Warna background abu-abu
+                        foregroundColor: Colors.black, // Warna teks
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        minimumSize: const Size(
+                            double.infinity, 48), // Tombol melebar penuh
+                      ),
+                      onPressed: () {
+                        // Tambahkan logika onPressed di sini
+                      },
+                      child: const Text('See CV/Interview'),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

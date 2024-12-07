@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hirequest/ui/pages/auth/login_page.dart';
 import 'package:hirequest/ui/pages/home/beranda.dart';
+import 'package:hirequest/ui/widgets/bottom_navigation.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -22,7 +23,7 @@ class _RegisterPageState extends State<RegisterPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 42),
-              Image.asset('assets/images/hirequest.png',
+              Image.asset('assets/image/hirequest.png',
                   width: 150.0, height: 150.0),
               const SizedBox(height: 42),
               Container(
@@ -128,7 +129,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           ),
                         ),
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const BerandaPage()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const BottomNavigation()));
                         },
                         child: const Text(
                           'Masuk',
@@ -166,7 +167,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                   builder: (context) => const BerandaPage()));
                         },
                         icon: Image.asset(
-                          'assets/icons/google_icon.png',
+                          'assets/icons/google.png',
                           width: 24,
                           height: 24,
                         ),

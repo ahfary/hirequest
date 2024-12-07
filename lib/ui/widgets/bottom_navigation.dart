@@ -13,16 +13,16 @@ class BottomNavigation extends StatefulWidget {
 class _BottomNavigationState extends State<BottomNavigation> {
   int _selectedIndex = 0;
   final List<Widget>_Page = [
-    Center(
+    const Center(
       child: BerandaPage(),
     ),
-    Center(
+    const Center(
       child: SearchPage(),
     ),
-    Center(
+    const Center(
       child: HomePage(),
     ),
-    Center(
+    const Center(
       child: HomePage(),
     ),
   ];

@@ -19,11 +19,11 @@ class InputButton extends StatelessWidget {
       child: Container(
         width: 60,
         height: 60,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           shape: BoxShape.circle,
           color: Colors.grey
         ),
-        child: Center(child: Text(title, style: TextStyle(color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),)),
+        child: Center(child: Text(title, style: const TextStyle(color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),)),
       ),
     );
   }

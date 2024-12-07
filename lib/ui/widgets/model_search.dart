@@ -12,7 +12,7 @@ class ModelSearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       height: 203,
       width: 385,
       decoration: BoxDecoration(
@@ -56,7 +56,7 @@ class ModelSearch extends StatelessWidget {
               ),
               child: Center(child: Text('Design', style: kategoriTextStyle,)),
               ),
-              SizedBox(width: 12,),
+              const SizedBox(width: 12,),
               Container(
                 height: 26,
                 width: 94,
@@ -66,7 +66,7 @@ class ModelSearch extends StatelessWidget {
               ),
               child: Center(child: Text('Full time', style: kategoriTextStyle,)),
               ),
-              SizedBox(width: 12,),
+              const SizedBox(width: 12,),
               Container(
                 height: 26,
                 width: 94,
@@ -78,7 +78,7 @@ class ModelSearch extends StatelessWidget {
               ),
             ],
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text('25 menit yang lalu'),
