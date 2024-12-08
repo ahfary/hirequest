@@ -51,6 +51,7 @@ class _SearchPageState extends State<SearchPage> {
 
   Widget Header(){
     return Container(
+      padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
       height: 245,
       width: double.infinity,
       decoration: BoxDecoration(
@@ -66,27 +67,56 @@ class _SearchPageState extends State<SearchPage> {
             fontSize: 12,
             fontWeight: light
           ),),
+          SizedBox(height: 10,),
           Container(
-            height: 38,
+            padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+            height: 46,
             width: 373,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10)
             ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('California, USA'),
+                Icon(Icons.location_pin),
+              ],
+            ),
           ),
           const SizedBox(height: 20,),
-          TextFormField(
-              // onChanged: (value) => updateList(value),
-              decoration: InputDecoration(
-                  fillColor: Colors.white,
-                  filled: true,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(100),
-                    borderSide: BorderSide.none,
+          Row(
+            children: [
+              Container(
+                height: 40,
+                width: 40,
+                decoration: BoxDecoration(
+                  color: Color(0xffDCA400),
+                  borderRadius: BorderRadius.circular(10)
+                ),
+                child: Image.asset('assets/icons/filter.png'),
+              ),
+              SizedBox(width: 5,),
+              Container(
+                width: 300,
+                // color: Colors.green,
+                // height: 46,
+                child: TextFormField(
+                    // onChanged: (value) => updateList(value),
+                    decoration: InputDecoration(
+                        fillColor: Colors.white,
+                        filled: true,
+                        contentPadding: EdgeInsets.symmetric(vertical: 10),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(100),
+                          borderSide: BorderSide.none,
+                        ),
+                        prefixIcon: const Icon(Icons.search),
+                        hintText: 'Search ...'),
                   ),
-                  prefixIcon: const Icon(Icons.search),
-                  hintText: 'Search ...'),
-            ),
+              ),
+            ],
+          ),
 
         ],
       ),
@@ -100,12 +130,18 @@ class _SearchPageState extends State<SearchPage> {
           child: Column(
             children: [
               Header(),
+              Padding(padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                children: [  
               const SizedBox(height: 40,),
-              const ModelSearch(image: 'assets/icons/google.png', title: 'UI/UX Designer', description: 'Google inc . California, USA', price: 'd'),
+               ModelSearch(image: 'assets/icons/google.png', title: 'UI/UX Designer', description: 'Google inc . California, USA', harga:'Rp.225 Juta' ,),
               const SizedBox(height: 14,),
-              const ModelSearch(image: 'assets/icons/google.png', title: 'UI/UX Designer', description: 'Google inc . California, USA', price: 'd'),
+               ModelSearch(image: 'assets/icons/dribble.png', title: 'Lead Designer', description: 'Dribbble inc . California, USA', harga: 'Rp.295 Juta'),
               const SizedBox(height: 14,),
-              const ModelSearch(image: 'assets/icons/google.png', title: 'UI/UX Designer', description: 'Google inc . California, USA', price: 'd'),
+               ModelSearch(image: 'assets/icons/Twitter.png', title: 'Programmer Designer', description: 'Twitter inc . California, USA', harga: 'Rp.750 Juta'),
+              ]
+              ),
+              ),
             ],
           ),
         ),

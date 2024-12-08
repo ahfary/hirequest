@@ -5,9 +5,9 @@ class ModelSearch extends StatelessWidget {
   final String image;
   final String title;
   final String description;
-  final String price;
+  final String harga;
 
-  const ModelSearch({super.key, required this.image, required this.title, required this.description, required this.price});
+  const ModelSearch({super.key, required this.image, required this.title, required this.description, required this.harga, });
 
   @override
   Widget build(BuildContext context) {
@@ -78,13 +78,13 @@ class ModelSearch extends StatelessWidget {
               ),
             ],
           ),
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text('25 menit yang lalu'),
               Row(
                 children: [
-              Text('Rp.225 Juta '),
+              Text(harga),
               Text('/Bulan'),
                 ],
               )
