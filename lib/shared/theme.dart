@@ -27,6 +27,16 @@ TextStyle kategoriTextStyle = GoogleFonts.dmSans(
   fontWeight: light
 );
 
+TextStyle Price = GoogleFonts.dmSans(
+  fontSize: 14,
+  fontWeight: bold
+);
+
+TextStyle subJudulDetail = GoogleFonts.dmSans(
+  fontSize: 16,
+  fontWeight: bold
+);
+
 // FontWeight
 FontWeight light = FontWeight.w300;
 FontWeight regular = FontWeight.w400;

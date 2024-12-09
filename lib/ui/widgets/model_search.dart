@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hirequest/shared/theme.dart';
 
 class ModelSearch extends StatelessWidget {
@@ -37,14 +38,15 @@ class ModelSearch extends StatelessWidget {
               Image.asset('assets/icons/Save.png')
             ],
           ),
-          Text(title, style: TextStyle(
+          Text(title, style: GoogleFonts.dmSans(
             fontWeight: bold,
             fontSize: 18,
           ),),
-          Text(description, style: TextStyle(
+          Text(description, style: GoogleFonts.dmSans(
             fontSize: 14,
             fontWeight: regular
           ),),
+          SizedBox(height:10,),
           Row(
             children: [
               Container(
@@ -78,13 +80,14 @@ class ModelSearch extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(height : 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text('25 menit yang lalu'),
               Row(
                 children: [
-              Text(harga),
+              Text(harga, style: Price,),
               Text('/Bulan'),
                 ],
               )
