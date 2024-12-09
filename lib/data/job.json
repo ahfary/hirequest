@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1,
+        "title": "Programmer",
+        "company": "Google",
+        "location": "California, USA",
+        "posted_time": "1 day ago",
+        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+        "responsibilities": [
+            "Develop and maintain scalable web applications.",
+            "Collaborate with cross-functional teams to define, design, and deliver new features.",
+            "Troubleshoot, debug, and optimize performance."
+        ],
+        "qualifications": [
+            "Bachelor's degree in Computer Science or related field.",
+            "Proficiency in JavaScript, Python, or Java.",
+            "Strong problem-solving and communication skills."
+        ],
+        "website": "https://www.google.com",
+        "industry": "Internet product",
+        "employee_size": "132,121 Employees",
+        "job_type": "Full-Time",
+        "salary": "Rp.225 Juta/Bulan"
+    },
+    {
+        "id": 2,
+        "title": "UI/UX Designer",
+        "company": "Google",
+        "location": "California, USA",
+        "posted_time": "2 days ago",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.",
+        "responsibilities": [
+            "Create user-friendly designs for web and mobile platforms.",
+            "Conduct user research and usability testing.",
+            "Collaborate with developers to ensure design feasibility."
+        ],
+        "qualifications": [
+            "Bachelor's degree in Design or related field.",
+            "Experience with design tools like Figma, Adobe XD, or Sketch.",
+            "Strong portfolio showcasing design projects."
+        ],
+        "website": "https://www.google.com",
+        "industry": "Internet product",
+        "employee_size": "132,121 Employees",
+        "job_type": "Full-Time",
+        "salary": "Rp.225 Juta/Bulan"
+    }
+]
