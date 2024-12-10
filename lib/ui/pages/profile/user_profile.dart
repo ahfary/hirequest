@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hirequest/ui/pages/auth/login_page.dart';
+import 'package:hirequest/ui/pages/profile/user_history.dart';
+import 'package:hirequest/ui/pages/profile/user_my_account.dart';
+import 'package:hirequest/ui/pages/profile/user_security.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -32,7 +36,7 @@ class ProfilePage extends StatelessWidget {
             ),
             const SizedBox(height: 12.0),
             const Text(
-              'HireQuest',
+              'Radistian Azka Putra Kushariyanto',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 16.0),
@@ -99,7 +103,7 @@ class ProfilePage extends StatelessWidget {
               title: const Text('Akun saya'),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16.0),
               onTap: () {
-                // TODO: Navigate to My Account
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const EditProfilePage()));
               },
             ),
             ListTile(
@@ -107,7 +111,7 @@ class ProfilePage extends StatelessWidget {
               title: const Text('Pengaturan keamanan'),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16.0),
               onTap: () {
-                // TODO: Navigate to Security Settings
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const SecurityPage()));
               },
             ),
             ListTile(
@@ -115,7 +119,7 @@ class ProfilePage extends StatelessWidget {
               title: const Text('Pengaturan'),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16.0),
               onTap: () {
-                // TODO: Navigate to Settings
+                // Navigator.push(context, MaterialPageRoute(builder: (context) => const SecurityPage()));
               },
             ),
             ListTile(
@@ -123,13 +127,13 @@ class ProfilePage extends StatelessWidget {
               title: const Text('Riwayat pekerjaan'),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16.0),
               onTap: () {
-                // TODO: Navigate to Job History
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const JobHistoryPage()));
               },
             ),
             const SizedBox(height: 24.0),
             TextButton(
               onPressed: () {
-                // TODO: Implement logout functionality
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginPage()));
               },
               child: const Text(
                 'Log out',

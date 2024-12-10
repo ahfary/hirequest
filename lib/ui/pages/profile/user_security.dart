@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hirequest/ui/pages/profile/pin_page.dart';
 
 class SecurityPage extends StatefulWidget {
   const SecurityPage({super.key});
@@ -21,7 +22,7 @@ class _SecurityPageState extends State<SecurityPage> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
-            // TODO: Add back navigation
+            Navigator.pop(context);
           },
         ),
         title: const Text(
@@ -36,46 +37,62 @@ class _SecurityPageState extends State<SecurityPage> {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                child: Row(
-                  children: [
-                    Image.asset('assets/icons/ubahPassword.png'),
-                    const SizedBox(width: 20),
-                    const Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Ubah Password",
-                          style: TextStyle(fontSize: 16),
-                        ),
-                        Text(
-                          "Perbarui kata sandi Anda saat ini untuk\nmemastikan akun Anda tetap aman.",
-                          style: TextStyle(fontSize: 12, color: Color(0xff6A6F7B)),
-                        ),
-                      ],
-                    ),
-                    const Spacer(),
-                    const Icon(Icons.arrow_forward_ios_rounded),
-                  ],
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                child: InkWell(
+                  onTap: () {
+                    // Navigasi ke halaman ubah password
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            const PinPage(), // Ganti dengan halaman Anda
+                      ),
+                    );
+                  },
+                  child: Row(
+                    children: [
+                      Image.asset('assets/icons/ubahPassword.png'),
+                      const SizedBox(width: 20),
+                      const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Ubah Password",
+                            style: TextStyle(fontSize: 16),
+                          ),
+                          Text(
+                            "Perbarui kata sandi Anda saat ini untuk\nmemastikan akun Anda tetap aman.",
+                            style: TextStyle(
+                                fontSize: 12, color: Color(0xff6A6F7B)),
+                          ),
+                        ],
+                      ),
+                      const Spacer(),
+                      const Icon(Icons.arrow_forward_ios_rounded),
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(height: 30),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                 child: Row(
                   children: [
                     Image.asset('assets/icons/a2f.png'),
                     const SizedBox(width: 20),
                     const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children:  [
+                      children: [
                         Text(
                           "Autentikasi Dua Faktor",
                           style: TextStyle(fontSize: 16),
                         ),
                         Text(
                           "Tingkatkan keamanan akun Anda\ndengan memerlukan verifikasi satu detik.",
-                          style: TextStyle(fontSize: 12, color: Color(0xff6A6F7B)),
+                          style:
+                              TextStyle(fontSize: 12, color: Color(0xff6A6F7B)),
                         ),
                       ],
                     ),
@@ -93,7 +110,8 @@ class _SecurityPageState extends State<SecurityPage> {
               ),
               const SizedBox(height: 30),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                 child: Row(
                   children: [
                     Image.asset('assets/icons/fingerprint.png'),
@@ -107,7 +125,8 @@ class _SecurityPageState extends State<SecurityPage> {
                         ),
                         Text(
                           "Perbarui kata sandi Anda saat ini untuk\nmemastikan akun Anda tetap aman.",
-                          style: TextStyle(fontSize: 12, color: Color(0xff6A6F7B)),
+                          style:
+                              TextStyle(fontSize: 12, color: Color(0xff6A6F7B)),
                         ),
                       ],
                     ),
@@ -125,7 +144,8 @@ class _SecurityPageState extends State<SecurityPage> {
               ),
               const SizedBox(height: 30),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                 child: Row(
                   children: [
                     Image.asset('assets/icons/securityQuestions.png'),
@@ -139,7 +159,8 @@ class _SecurityPageState extends State<SecurityPage> {
                         ),
                         Text(
                           "Tambahkan Lapisan Keamanan Ekstra\ndengan menyiapkan security question",
-                          style: TextStyle(fontSize: 12, color: Color(0xff6A6F7B)),
+                          style:
+                              TextStyle(fontSize: 12, color: Color(0xff6A6F7B)),
                         ),
                       ],
                     ),
@@ -157,7 +178,8 @@ class _SecurityPageState extends State<SecurityPage> {
               ),
               const SizedBox(height: 30),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                 child: Row(
                   children: [
                     Image.asset('assets/icons/riwayatLogin.png'),
@@ -171,7 +193,8 @@ class _SecurityPageState extends State<SecurityPage> {
                         ),
                         Text(
                           "Log semua upaya login ke akun Anda.\nTermasuk upaya yang berhasil dan gagal.",
-                          style: TextStyle(fontSize: 12, color: Color(0xff6A6F7B)),
+                          style:
+                              TextStyle(fontSize: 12, color: Color(0xff6A6F7B)),
                         ),
                       ],
                     ),

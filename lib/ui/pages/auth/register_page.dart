@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hirequest/ui/pages/auth/login_page.dart';
-import 'package:hirequest/ui/pages/home/beranda.dart';
 import 'package:hirequest/ui/widgets/bottom_navigation.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -164,7 +163,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const BerandaPage()));
+                                  builder: (context) => const BottomNavigation()));
                         },
                         icon: Image.asset(
                           'assets/icons/google.png',

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hirequest/ui/pages/home/beranda.dart';
 import 'package:hirequest/ui/pages/home/search.dart';
-import 'package:hirequest/ui/pages/profile/pin_page.dart';
+import 'package:hirequest/ui/pages/profile/user_profile.dart';
+import 'package:hirequest/ui/pages/setting/setting.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({super.key});
@@ -20,10 +21,10 @@ class _BottomNavigationState extends State<BottomNavigation> {
       child: SearchPage(),
     ),
     const Center(
-      child: HomePage(),
+      child: ProfilePage(),
     ),
     const Center(
-      child: HomePage(),
+      child: SettingsPage(),
     ),
   ];
 

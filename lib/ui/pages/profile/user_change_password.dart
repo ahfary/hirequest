@@ -12,7 +12,7 @@ class ChangePasswordPage extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            // Navigator.of(context).pop();
+            Navigator.pop(context);
           },
         ),
       ),

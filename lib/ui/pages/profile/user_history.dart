@@ -12,7 +12,7 @@ class JobHistoryPage extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
-            // TODO: Add back navigation
+            Navigator.pop(context);
           },
         ),
         title: const Text(
@@ -24,7 +24,8 @@ class JobHistoryPage extends StatelessWidget {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               decoration: BoxDecoration(
@@ -53,10 +54,12 @@ class JobHistoryPage extends StatelessWidget {
           ),
           Expanded(
             child: ListView.builder(
-              padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
-              itemCount: 12, // Example count, change based on your data
+              padding:
+                  const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+              itemCount: 7, // Example count, change based on your data
               itemBuilder: (context, index) {
                 return ListTile(
+                  contentPadding: const EdgeInsets.all(8.0),
                   leading: Image.asset(
                     'assets/icons/google.png',
                     width: 40,
@@ -81,8 +84,7 @@ class JobHistoryPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  onTap: () {
-                  },
+                  onTap: () {},
                 );
               },
             ),

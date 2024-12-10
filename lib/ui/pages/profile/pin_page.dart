@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hirequest/ui/pages/profile/user_change_password.dart';
 
 class PinPage extends StatefulWidget {
   const PinPage({super.key});
@@ -43,7 +44,7 @@ class _PinPageState extends State<PinPage> {
       // PIN benar, navigasi ke halaman beranda
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const HomePage()),
+        MaterialPageRoute(builder: (context) => const ChangePasswordPage()),
       );
     } else {
       // PIN salah, reset PIN dan tampilkan pesan
