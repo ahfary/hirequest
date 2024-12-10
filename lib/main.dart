@@ -3,6 +3,7 @@ import 'package:hirequest/ui/pages/home/beranda.dart';
 import 'package:hirequest/ui/pages/home/company_job_hire.dart';
 import 'package:hirequest/ui/pages/home/search.dart';
 import 'package:hirequest/ui/pages/home/splash_screen.dart';
+import 'package:hirequest/ui/widgets/bottom_navigation.dart';
 
 void main() => runApp(const MyApp());
 

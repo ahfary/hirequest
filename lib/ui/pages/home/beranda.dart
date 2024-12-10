@@ -25,7 +25,7 @@ class BerandaPage extends StatelessWidget {
             const SizedBox(height: 16),
             // Banner
             Container(
-              height: 150,
+              height: 230,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
               ),
@@ -38,19 +38,14 @@ class BerandaPage extends StatelessWidget {
                       width: double.infinity,
                     ),
                     const SizedBox(height: 24),
-                    const Text(
-                      'Dreaming of Google?\nHere is how you can land a job there!',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                      ),
-                    ),
+                    
+                    
                   ],
                 ),
               ),
             ),
-            const SizedBox(height: 64),
+            const SizedBox(height: 8
+            ),
             // Recommended Jobs
             const Text(
               'Recommended Jobs',

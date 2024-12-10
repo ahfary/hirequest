@@ -10,44 +10,52 @@ class SearchPage extends StatefulWidget {
 }
 
 class _SearchPageState extends State<SearchPage> {
-  // List<modelsearch> productlagu = [];
-  // List<modelsearch> displaymodels = [];
-  // String searchText = '';
+  List<ModelSearch> productlagu = [
+    ModelSearch(
+      image: 'assets/icons/google.png',
+      title: 'UI/UX Designer',
+      description: 'Google inc . California, USA',
+      harga: 'Rp.225 Juta',
+    ),
+    ModelSearch(
+        image: 'assets/icons/dribble.png',
+        title: 'Lead Designer',
+        description: 'Dribbble inc . California, USA',
+        harga: 'Rp.295 Juta'),
+    ModelSearch(
+        image: 'assets/icons/Twitter.png',
+        title: 'Programmer Designer',
+        description: 'Twitter inc . California, USA',
+        harga: 'Rp.750 Juta'),
+  ];
 
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   loadProducts();
-  //   // displaymodels = productlagu;
-  // }
+  List<ModelSearch> displaymodels = [];
+  String searchText = '';
 
-  // Future<void> loadProducts() async {
-  //   final String response =
-  //       await rootBundle.loadString('assets/product_lagu.json');
-  //   final List<dynamic> data = jsonDecode(response);
+  @override
+  void initState() {
+    super.initState();
+    displaymodels = productlagu;
+  }
 
-  //   setState(() {
-  //     productlagu = data.map((item) => modelsearch.fromJson(item)).toList();
-  //     displaymodels = productlagu;
-  //   });
-  // }
+  void updateList(String value) {
+    setState(() {
+      searchText = value;
+      if (searchText.isEmpty) {
+        displaymodels = productlagu;
+      } else {
+        displaymodels = productlagu
+            .where((product) =>
+                product.title.toLowerCase().contains(value.toLowerCase()))
+            .toList();
+      }
+    });
+  }
 
-  // void updateList(String value) {
-  //   setState(() {
-  //     searchText = value;
-  //     if (searchText.isEmpty) {
-  //       displaymodels = productlagu;
-  //     } else {
-  //       displaymodels = productlagu
-  //           .where((product) =>
-  //               product.namalagu.toLowerCase().contains(value.toLowerCase()))
-  //           .toList();
-  //     }
-  //   });
-  // }
   @override
   Widget Header() {
     return Container(
+      margin: EdgeInsets.only(bottom: 40),
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       height: 245,
       width: double.infinity,
@@ -100,7 +108,7 @@ class _SearchPageState extends State<SearchPage> {
                 // color: Colors.green,
                 // height: 46,
                 child: TextFormField(
-                  // onChanged: (value) => updateList(value),
+                  onChanged: (value) => updateList(value),
                   decoration: InputDecoration(
                       fillColor: Colors.white,
                       filled: true,
@@ -127,35 +135,23 @@ class _SearchPageState extends State<SearchPage> {
         child: Column(
           children: [
             Header(),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Column(children: [
-                SizedBox(
-                  height: 40,
-                ),
-                ModelSearch(
-                  image: 'assets/icons/google.png',
-                  title: 'UI/UX Designer',
-                  description: 'Google inc . California, USA',
-                  harga: 'Rp.225 Juta',
-                ),
-                SizedBox(
-                  height: 14,
-                ),
-                ModelSearch(
-                    image: 'assets/icons/dribble.png',
-                    title: 'Lead Designer',
-                    description: 'Dribbble inc . California, USA',
-                    harga: 'Rp.295 Juta'),
-                SizedBox(
-                  height: 14,
-                ),
-                ModelSearch(
-                    image: 'assets/icons/Twitter.png',
-                    title: 'Programmer Designer',
-                    description: 'Twitter inc . California, USA',
-                    harga: 'Rp.750 Juta'),
-              ]),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                children: displaymodels.map((model) {
+                  return Column(
+                    children: [
+                      ModelSearch(
+                        image: model.image,
+                        title: model.title,
+                        description: model.description,
+                        harga: model.harga,
+                      ),
+                      const SizedBox(height: 14),
+                    ],
+                  );
+                }).toList(),
+              ),
             ),
           ],
         ),
